@@ -45,7 +45,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //
         let cellIdentifier = "Cell"
-        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! NotECell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! NotECell
    
 
         cell.configure(self.note[indexPath.row] as! NSString, size: self.view.frame.size)

@@ -22,9 +22,9 @@ class ActionRequestHandler: NSObject, NSExtensionRequestHandling {
         // Find the item containing the results from the JavaScript preprocessing.
         let identifierType = NSString(format: kUTTypePropertyList, NSUTF8StringEncoding)
         
-        for (item: NSExtensionItem) in context.inputItems as! [NSExtensionItem] {
+        for item: NSExtensionItem in context.inputItems as! [NSExtensionItem] {
             
-            for (itemProvider: NSItemProvider) in item.attachments as! [NSItemProvider] {
+            for itemProvider: NSItemProvider in item.attachments as! [NSItemProvider] {
                 
                 if itemProvider.hasItemConformingToTypeIdentifier(identifierType as String) {
                     
